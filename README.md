@@ -7,7 +7,7 @@ A Clojure library for parsing pepxml files.
 Install as:
 
 ```clj
-[clj-pepxml "0.1.0"
+[clj-pepxml "0.1.1"
 ```
 
 Require:
