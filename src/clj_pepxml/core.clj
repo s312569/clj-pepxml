@@ -131,6 +131,12 @@
        (map #(xml1-> % :search_score (attr= :name "hyperscore") (attr :value)))
        (map #(Float/parseFloat %))))
 
+(defn peptide
+  [s]
+  "Returns the matched peptides."
+  (->> (sh-zip s)
+       (map #(xml1-> % (attr :peptide)))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; analysis etc
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
